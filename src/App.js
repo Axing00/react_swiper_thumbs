@@ -18,22 +18,40 @@ function App() {
   const [thumbsSwiper, setThumbsSwiper] = useState(null);
 
   const imageList = [
-    "https://swiperjs.com/demos/images/nature-1.jpg",
-    "https://swiperjs.com/demos/images/nature-2.jpg",
-    "https://swiperjs.com/demos/images/nature-3.jpg",
-    "https://swiperjs.com/demos/images/nature-4.jpg",
-    "https://swiperjs.com/demos/images/nature-5.jpg",
-    "https://swiperjs.com/demos/images/nature-6.jpg",
-    "https://swiperjs.com/demos/images/nature-7.jpg",
-    "https://swiperjs.com/demos/images/nature-8.jpg",
-    "https://swiperjs.com/demos/images/nature-9.jpg",
-    "https://swiperjs.com/demos/images/nature-10.jpg",
+    {
+      url: "https://swiperjs.com/demos/images/nature-1.jpg",
+      alt: "Nature 1",
+    },
+    {
+      url: "https://swiperjs.com/demos/images/nature-2.jpg",
+      alt: "Nature 2",
+    },
+    {
+      url: "https://swiperjs.com/demos/images/nature-3.jpg",
+      alt: "Nature 3",
+    },
+    {
+      url: "https://swiperjs.com/demos/images/nature-4.jpg",
+      alt: "Nature 4",
+    },
+    {
+      url: "https://swiperjs.com/demos/images/nature-5.jpg",
+      alt: "Nature 5",
+    },
+    {
+      url: "https://swiperjs.com/demos/images/nature-6.jpg",
+      alt: "Nature 6",
+    },
+    {
+      url: "https://swiperjs.com/demos/images/nature-7.jpg",
+      alt: "Nature 7",
+    },
   ];
 
   const renderSlides = () => {
-    return imageList.map((imageUrl, index) => (
+    return imageList.map((image, index) => (
       <SwiperSlide key={index}>
-        <img src={imageUrl} />
+        <img src={image.url} alt={image.alt} />
       </SwiperSlide>
     ));
   };
